@@ -6,10 +6,9 @@ ZSH_THEME_GIT_PROMPT_DIRTY="%{$fg[red]%}!"
 ZSH_THEME_GIT_PROMPT_CLEAN=""
 
 function prompt_char {
-	if [ "$(whoami)" = "root" ]; then echo "%{$fg[red]%}#%{$reset_color%}"; else echo "%{$fg_bold[blue]%}\n➜ %{$reset_color%}"; fi
+  if [ "$(whoami)" = "root" ]; then echo "%{$fg[red]%}#%{$reset_color%}"; else echo "%{$fg_bold[blue]%}\n➜ %{$reset_color%}"; fi
 }
 
 PROMPT='%{$fg_bold[green]%}${PWD/#$HOME/~}%{$reset_color%} $(prompt_char) '
 
-RPROMPT='%{$reset_color%}$(git_prompt_info)'
-
+RPROMPT='%{$fg[yellow]%}$(date "+%H:%M") %{$reset_color%}$(git_prompt_info)'
