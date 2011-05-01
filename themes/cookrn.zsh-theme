@@ -11,4 +11,4 @@ function prompt_char {
 
 PROMPT='%{$fg_bold[green]%}${PWD/#$HOME/~}%{$reset_color%} $(prompt_char) '
 
-RPROMPT='%{$fg[yellow]%}$(date "+%H:%M") %{$reset_color%}$(git_prompt_info)'
+RPROMPT='%{$fg[yellow]%}$(date "+%H:%M") %{$fg[yellow]%}(%{$fg_bold[blue]%}$(~/.rvm/bin/rvm-prompt i v g)%{$fg[yellow]%})%{$reset_color%} %{$reset_color%}$(git_prompt_info)'
